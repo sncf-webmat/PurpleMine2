@@ -27,7 +27,7 @@
 // --------------------------------------------------
 
 #content {
-  padding: $padding-side;
+  padding: 2 * $padding-large-vertical 2 * $padding-large-horizontal;
   overflow-x: auto; // needed for drag & drop of enumerations
 
   @if $css-grid-layout {

@@ -116,17 +116,21 @@
 #header {
   @extend %clearfix;
   position: relative;
+  border-bottom: 1px solid $table-border-color;
   background-color: $header-bg;
   color: $header-text;
 
   > h1 {
     padding: $header-padding-vertical $header-padding-horizontal;
+    font-size: 1.4em;
+    font-weight: 600;
 
     @if $use-logo {
       padding-left: $logo-image-width + $logo-position-horizontal + $logo-space;
-      background-image: url("../images/logo/logo.png");
+      background-image: url("../images/logo/logo.svg");
       background-repeat: no-repeat;
       background-position: $logo-position-horizontal $logo-position-vertical;
+      background-size: contain;
 
       @if $use-retina-logo {
         @include img-retina("../images/logo/logo@2x.png", $logo-image-width, $logo-image-height);
@@ -159,8 +163,8 @@
 
 #quick-search {
   #header & {
-    margin-top: floor(($header-title-line-height + $header-padding-vertical * 2 - $input-height-base) * .5) - 1px;
-    margin-right: $header-padding-horizontal;
+    margin-top: 7.25px;
+    margin-right: 16px;
     float: right;
     color: $header-text;
   }
@@ -353,7 +357,7 @@
           margin-right: $main-menu-padding-horizontal;
           padding-bottom: $main-menu-padding-vertical - 1px;
           border: 1px solid $main-menu-border;
-          border-width: 0 1px;
+          border-width: 1px 1px 0;
           background-color: $main-menu-dropdown-bg;
           font-size: 0;
 
@@ -384,7 +388,7 @@
     visibility: hidden;
     position: absolute;
     z-index: 1001;
-    min-width: 130px;
+    min-width: 160px;
     margin: 0 1px;
     padding: 0;
     overflow: hidden;
